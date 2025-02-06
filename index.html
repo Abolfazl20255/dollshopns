@@ -31,7 +31,7 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* هر ردیف 2 عکس */
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
         .gallery img {
@@ -61,7 +61,6 @@
         .btn:hover {
             background: #ff3399;
         }
-        /* پاپ‌آپ */
         .popup {
             display: none;
             position: fixed;
@@ -92,26 +91,25 @@
 <body>
 
     <div class="container">
-        <h1>به dollshopns دنیای عروسک های بافتنی خوش آمدید</h1>
-        <p class="desc">ما بهترین و جذاب ترین عروسک های بافتنی را برای شما آماده کرده ایم. با عشق خرید کنید</p>
-
-        <p>برای ثبت سفارش به پیج اینستاگرام مراجعه کنید</p>
+        <h1>به dollshopns سرزمین عروسک‌های بافتنی خوش آمدید</h1>
+        <p class="desc">ما بهترین و جذاب‌ترین عروسک‌های بافتنی را برای شما آماده کرده‌ایم. با عشق خرید کنید.</p>
 
         <div class="gallery">
-            <img src="https://i.postimg.cc/jjsssL0b/472547649-1788734578632034-8514592903985262509-n-webp.jpg" alt="عروسک بافتنی 1" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/Z5Pbt6QH/469974566-3783615805231373-2231633653268564379-n-webp.jpg" alt="عروسک بافتنی 2" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/zXgD7sS9/472534078-1140629154133772-5353844971935112429-n-webp.jpg" alt="عروسک بافتنی 3" onclick="openPopup(this.src)">
-            <img src="https://i.imgur.com/LFj322G.jpeg" alt="عروسک بافتنی 4" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/9XqFHPRh/Screenshot-Instagram.jpg" alt="عروسک بافتنی 5" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/43tBTSgc/Screenshot-Instagram.jpg" alt="Instagram" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/x1q9gKSh/472547649-1788734578632034-8514592903985262509-n-webp.jpg" alt="عروسک 1" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/280z40gn/469974566-3783615805231373-2231633653268564379-n-webp.jpg" alt="عروسک 2" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/44b43f5L/472534078-1140629154133772-5353844971935112429-n-webp.jpg" alt="عروسک 3" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/sxyVJqV4/471329257-1133044938444861-539697780840609254-n-webp.jpg" alt="عروسک 4" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/9XqFHPRh/Screenshot-Instagram.jpg" alt="عروسک 5" onclick="openPopup(this.src)">
+            <img src="https://i.postimg.cc/43tBTSgc/Screenshot-Instagram.jpg" alt="عروسک 6" onclick="openPopup(this.src)">
         </div>
+
+        <p class="desc">برای ثبت سفارش به پیج اینستاگرام مراجعه کنید.</p>
 
         <div class="buttons">
             <a class="btn" href="https://www.instagram.com/dollshopns" target="_blank">مشاهده در اینستاگرام</a>
         </div>
     </div>
 
-    <!-- پاپ‌آپ نمایش تصویر -->
     <div id="popup" class="popup">
         <span class="close" onclick="closePopup()">×</span>
         <img id="popup-img" src="" alt="Popup Image">
