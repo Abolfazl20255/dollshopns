@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DollShopNS - عروسک‌های بافتنی</title>
     <style>
         body {
@@ -13,35 +13,45 @@
             color: white;
             margin: 0;
             padding: 0;
-            height: 100vh;
         }
         .container {
-            max-width: 100%;
+            max-width: 900px;
+            width: 90%;
             margin: 30px auto;
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            overflow: hidden;
         }
         h1 {
-            font-size: 28px;
+            font-size: 24px;
         }
         .desc {
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 20px;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* گالری اسکرولی */
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
             gap: 10px;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+        .gallery-container::-webkit-scrollbar {
+            height: 5px;
+        }
+        .gallery-container::-webkit-scrollbar-thumb {
+            background: #ff007f;
+            border-radius: 5px;
         }
         .gallery img {
-            width: 100%;
+            width: 180px;
+            height: auto;
             border-radius: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            flex-shrink: 0;
         }
         .gallery img:hover {
             transform: scale(1.05);
@@ -52,9 +62,8 @@
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 18px;
+            padding: 10px 15px;
+            font-size: 16px;
             color: white;
             background: #ff007f;
             text-decoration: none;
@@ -90,19 +99,43 @@
             font-size: 30px;
             cursor: pointer;
         }
+
+        /* تنظیمات برای موبایل */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .desc {
+                font-size: 14px;
+            }
+            .gallery img {
+                width: 140px;
+            }
+            .btn {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>به dollshopns دنیای عروسک های بافتنی خوش آمدید</h1>
-        <p class="desc">ما بهترین و جذاب ترین عروسک های بافتنی را برای شما آماده کرده ایم. با عشق خرید کنید</p>
+        <p class="desc">ما بهترین و جذاب‌ترین عروسک‌های بافتنی را برای شما آماده کرده‌ایم. با عشق خرید کنید.</p>
 
-        <div class="gallery">
-            <img src="https://i.postimg.cc/jjsssL0b/472547649-1788734578632034-8514592903985262509-n-webp.jpg" alt="عروسک بافتنی 1" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/Z5Pbt6QH/469974566-3783615805231373-2231633653268564379-n-webp.jpg" alt="عروسک بافتنی 2" onclick="openPopup(this.src)">
-            <img src="https://i.postimg.cc/zXgD7sS9/472534078-1140629154133772-5353844971935112429-n-webp.jpg" alt="عروسک بافتنی 3" onclick="openPopup(this.src)">
-            <img src="https://i.imgur.com/LFj322G.jpeg" alt="عروسک بافتنی 4" onclick="openPopup(this.src)">
+        <div class="gallery-container">
+            <div class="gallery">
+                <img src="https://i.postimg.cc/jjsssL0b/472547649-1788734578632034-8514592903985262509-n-webp.jpg" alt="عروسک 1" onclick="openPopup(this.src)">
+                <img src="https://i.postimg.cc/Z5Pbt6QH/469974566-3783615805231373-2231633653268564379-n-webp.jpg" alt="عروسک 2" onclick="openPopup(this.src)">
+                <img src="https://i.postimg.cc/zXgD7sS9/472534078-1140629154133772-5353844971935112429-n-webp.jpg" alt="عروسک 3" onclick="openPopup(this.src)">
+                <img src="https://i.postimg.cc/mD6dLywN/471329257-1133044938444861-539697780840609254-n-webp.jpg" alt="عروسک 4" onclick="openPopup(this.src)">
+                <img src="https://i.postimg.cc/hvB0PZmm/Screenshot-Instagram.jpg" alt="عروسک 5" onclick="openPopup(this.src)">
+            </div>
         </div>
 
         <div class="buttons">
